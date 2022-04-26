@@ -21,5 +21,5 @@ public interface SanhaService {
     public String sanhaUpdate(Long id, SanhaDTO sanhaDTO) throws Exception;
 
     // 삭제
-    public String sanhaDeleteById(Long id) throws Exception;
+    public String sanhaDelete(Long id) throws Exception;
 }

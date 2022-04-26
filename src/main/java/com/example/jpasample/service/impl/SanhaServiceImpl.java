@@ -46,7 +46,7 @@ public class SanhaServiceImpl implements SanhaService {
     }
 
     @Override
-    public String sanhaDeleteById(Long id) throws Exception {
+    public String sanhaDelete(Long id) throws Exception {
         if(sanhaRepository.findById(id).isEmpty()) {
             return "NOT EXIST";
         } else {

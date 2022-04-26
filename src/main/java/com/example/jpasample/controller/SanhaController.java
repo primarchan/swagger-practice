@@ -45,6 +45,6 @@ public class SanhaController {
     // 삭제
     @DeleteMapping("/{id}")
     public void delete(@PathVariable("id") Long id) throws Exception {
-        sanhaService.sanhaDeleteById(id);
+        sanhaService.sanhaDelete(id);
     }
 }

@@ -26,7 +26,7 @@ public class Sanha {
     @Column(name = "ITEM")
     private String item;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "YANOLJA_ID")
     private Yanolja yanolja;
 
