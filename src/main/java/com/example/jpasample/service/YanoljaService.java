@@ -1,8 +1,6 @@
 package com.example.jpasample.service;
 
-import com.example.jpasample.domain.sanha.Sanha;
 import com.example.jpasample.domain.yanolja.Yanolja;
-import com.example.jpasample.dto.SanhaDTO;
 import com.example.jpasample.dto.YanoljaDTO;
 
 import java.util.List;

@@ -1,10 +1,15 @@
 package com.example.jpasample.controller;
 
+import com.example.jpasample.common.Constants;
+import com.example.jpasample.common.exception.JpaSampleException;
 import com.example.jpasample.domain.sanha.Sanha;
+import com.example.jpasample.dto.MemberDTO;
 import com.example.jpasample.dto.SanhaDTO;
 import com.example.jpasample.service.SanhaService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -47,4 +52,29 @@ public class SanhaController {
     public void delete(@PathVariable("id") Long id) throws Exception {
         sanhaService.sanhaDelete(id);
     }
+
+    // 예외 발생 시
+    @PostMapping(value = "/exception")
+    public void exceptionTest() throws JpaSampleException {
+        throw new JpaSampleException(Constants.ExceptionClass.SANHA, HttpStatus.BAD_REQUEST, "의도한 에러가 발생했습니다.");
+    }
+
+    /*
+        PutMapping 예제
+     */
+    @PutMapping("/member1")
+     public String postMemberDTO1(@RequestBody MemberDTO memberDTO) {
+        return memberDTO.toString();
+    }
+
+    @PutMapping("/member2")
+    public MemberDTO postMemberDTO2(@RequestBody MemberDTO memberDTO) {
+        return memberDTO;
+    }
+
+    @PutMapping("/member3")
+    public ResponseEntity<MemberDTO> postMemberDTO3(@RequestBody MemberDTO memberDTO) {
+        return ResponseEntity.status(HttpStatus.ACCEPTED).body(memberDTO);
+    }
+
 }
