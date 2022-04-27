@@ -2,6 +2,8 @@ package com.example.jpasample.service.impl;
 
 import com.example.jpasample.domain.sanha.Sanha;
 import com.example.jpasample.domain.sanha.SanhaRepository;
+import com.example.jpasample.domain.yanolja.Yanolja;
+import com.example.jpasample.domain.yanolja.YanoljaRepository;
 import com.example.jpasample.dto.SanhaDTO;
 import com.example.jpasample.service.SanhaService;
 import lombok.RequiredArgsConstructor;
@@ -17,10 +19,12 @@ import java.util.Optional;
 public class SanhaServiceImpl implements SanhaService {
 
     private final SanhaRepository sanhaRepository;
+    private final YanoljaRepository yanoljaRepository;
 
     @Override
     public void sanhaSave(SanhaDTO sanhaDTO) throws Exception {
-        Sanha sanha = new Sanha(sanhaDTO.getId(), sanhaDTO.getPhoneNo(), sanhaDTO.getAddress(), sanhaDTO.getItem(), sanhaDTO.getYanolja());
+        Yanolja yanolja = yanoljaRepository.findOne(sanhaDTO.getYanoljaId());
+        Sanha sanha = Sanha.createSanha(sanhaDTO.getPhoneNo(), sanhaDTO.getAddress(), sanhaDTO.getItem(), yanolja);
         sanhaRepository.save(sanha);
     }
 

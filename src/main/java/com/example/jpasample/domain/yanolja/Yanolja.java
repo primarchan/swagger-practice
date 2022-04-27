@@ -27,7 +27,7 @@ public class Yanolja {
     @Column(name = "ITEM")
     private String item;
 
-    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "yanolja")
     private List<Sanha> sanhaList = new ArrayList<>();
 
     public Yanolja(Long id, String phoneNo, String address, String item, List<Sanha> sanhaList) {

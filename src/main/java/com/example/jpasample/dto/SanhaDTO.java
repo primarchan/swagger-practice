@@ -20,4 +20,6 @@ public class SanhaDTO {
 
     private Yanolja yanolja;
 
+    private Long yanoljaId;
+
 }

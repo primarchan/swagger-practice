@@ -38,4 +38,13 @@ public class Sanha {
         this.yanolja = yanolja;
     }
 
+    public static Sanha createSanha(String phoneNo, String address, String item, Yanolja yanolja) {
+        Sanha sanha = new Sanha();
+        sanha.setYanolja(yanolja);
+        sanha.setPhoneNo(phoneNo);
+        sanha.setAddress(address);
+        sanha.setItem(item);
+        return sanha;
+    }
+
 }
