@@ -1,6 +1,7 @@
 package com.example.jpasample.domain.sanha;
 
 import com.example.jpasample.domain.yanolja.Yanolja;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -26,6 +27,7 @@ public class Sanha {
     @Column(name = "ITEM")
     private String item;
 
+    @JsonBackReference
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "YANOLJA_ID")
     private Yanolja yanolja;

@@ -1,6 +1,7 @@
 package com.example.jpasample.domain.yanolja;
 
 import com.example.jpasample.domain.sanha.Sanha;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -27,6 +28,7 @@ public class Yanolja {
     @Column(name = "ITEM")
     private String item;
 
+    @JsonManagedReference
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "yanolja")
     private List<Sanha> sanhaList = new ArrayList<>();
 
