@@ -1,13 +1,13 @@
-#JPA-Study-Project
+# JPA-Study-Project
 
 ### Swagger2 적용 가이드
 * [공식 사이트 링크(클릭)](https://swagger.io/resources/articles/documenting-apis-with-swagger/)
-> ####build.gradle에 Swagger 관련 라이브러리 추가
+> #### build.gradle에 Swagger 관련 라이브러리 추가
 > * implementation 'io.springfox:springfox-swagger2:2.9.2'
 > * implementation 'io.springfox:springfox-swagger-ui:2.9.2'
-> ####Swagger 2.9.2 버전 적용 시 스프링 부트 버전이 2.4.2보다 상위 버전일 경우 버전 수정 필요
+> #### Swagger 2.9.2 버전 적용 시 스프링 부트 버전이 2.4.2보다 상위 버전일 경우 버전 수정 필요
 > * id 'org.springframework.boot' version '2.4.2'
-> ####Swagger 관련 설정 추가
+> #### Swagger 관련 설정 추가
 > ```java
 > import springfox.documentation.spring.web.plugins.Docket;
 > import springfox.documentation.swagger2.annotations.EnableSwagger2;
@@ -36,7 +36,7 @@
 >
 >}
 >```
-> ####RestController에 @ApiOperation 어노테이션 추가
+> #### RestController에 @ApiOperation 어노테이션 추가
 > ```java
 > /**
 > ** 예시 **
