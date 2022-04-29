@@ -1,7 +1,7 @@
 # JPA-Study-Project
 
 ### Swagger2 적용 가이드
-* [공식 사이트 링크](https://swagger.io/resources/articles/documenting-apis-with-swagger/)
+* [공식 사이트 링크(클릭)](https://swagger.io/resources/articles/documenting-apis-with-swagger/)
 > #### build.gradle에 Swagger 관련 라이브러리 추가
 > * implementation 'io.springfox:springfox-swagger2:2.9.2'
 > * implementation 'io.springfox:springfox-swagger-ui:2.9.2'
