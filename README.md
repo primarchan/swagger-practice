@@ -35,7 +35,7 @@
 >   }
 >
 >}
->```
+>``` 
 > #### RestController에 @ApiOperation 어노테이션 추가
 > ```java
 > /**
@@ -52,4 +52,4 @@
 > }
 > ```
 > #### Swagger를 이용한 API 문서 확인
-> * http://localhost:8080/swagger-ui.html로 접속
+> * http://localhost:8080/swagger-ui.html 접속
