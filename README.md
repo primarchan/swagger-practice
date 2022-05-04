@@ -1,4 +1,4 @@
-# JPA-Basic-Project01
+# JPA-Basic-Project
 
 ### Swagger2 적용 가이드
 * [공식 사이트 링크(클릭)](https://swagger.io/resources/articles/documenting-apis-with-swagger/)
